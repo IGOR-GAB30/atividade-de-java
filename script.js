@@ -94,7 +94,54 @@ function balancoFinanceiro() {
 
 }
 
- balancoFinanceiro();
+//balancoFinanceiro();
+
+//exercício 4:  Ordenação de Valores Inteiros
+
+function OrdenacaoNumerica() {
+
+    let numeros = [];
+    let aux = 0;
+    let inverte = true;
+
+    for (let i = 1; i <= 4; i++) {
+
+        let numero = Number(prompt("Digite u número inteiro " + i));
+
+        while (!Number.isInteger(numero)) {
+            numero = Number(prompt("Digite um número inteiro válido!"))
+        }
+
+        numeros.push(numero);
+
+    }
+
+    //organizando os números em ordem decrescente
+
+    while (inverte) {
+
+        inverte = false;
+
+        for (let i = 0; i < numeros.length - 1; i++) {
+
+            if (numeros[i] < numeros[i + 1]) {
+
+                aux = numeros[i];
+                numeros[i] = numeros[i + 1];
+                numeros[i + 1] = aux;
+                inverte = true;
+
+            }
+        }
+
+    }
+
+    alert("Números digitados em ordem decrescente: " + numeros.join(", "));
+
+}
+
+OrdenacaoNumerica();
+
 
 
 
