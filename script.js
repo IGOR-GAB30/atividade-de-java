@@ -1,4 +1,5 @@
-function exercicio1() {
+//exercício 1: Soma de números
+function somaNumeros() {
     let soma = 0;
     let continuar = true;
 
@@ -16,12 +17,31 @@ function exercicio1() {
         }
 
         continuar = confirm("Deseja adicionar mais um número?");
-
+    
     }
+
     alert("A soma dos números é " + soma);
 
 }
 
-//exercicio1(); de 
+//somaNumeros();
+
+//exercício 2: Contagem regressiva
+
+function contagem() {
+
+    console.log("Contagem regressiva para o lançamento!")
+    for (let i = 10; i >= 0; i--) {
+
+        console.log(i);
+    
+    }
+    {
+        console.log("Lançamento realizado!")
+    }
+}
+
+contagem();
+
 
 
