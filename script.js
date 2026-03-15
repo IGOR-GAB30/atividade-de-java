@@ -17,7 +17,7 @@ function somaNumeros() {
         }
 
         continuar = confirm("Deseja adicionar mais um número?");
-    
+
     }
 
     alert("A soma dos números é " + soma);
@@ -34,14 +34,67 @@ function contagem() {
     for (let i = 10; i >= 0; i--) {
 
         console.log(i);
-    
+
     }
     {
         console.log("Lançamento realizado!")
     }
 }
 
-contagem();
+//contagem();
+
+//exercício 3: Balanço Financeiro Anual de uma Empresa
+
+function balancoFinanceiro() {
+
+    function calculo_mensal() {
+
+        let valor_total = 0;
+        let despesa_total = 0;
+        let mes = 1;
+        let saldo_total = 0;
+
+        while (mes <= 12) {
+            let faturamento = parseFloat(prompt("Digite qual foi o faturamento do mês " + mes));
+
+            if (isNaN(faturamento)) {
+                alert("Por favor, digite um número válido!");
+
+            } else {
+                valor_total += faturamento;
+            }
+
+            let gasto = parseFloat(prompt("Digite qual foi o valor das despesa do mês " + mes));
+
+            if (isNaN(gasto)) {
+                alert("Por favor, digite um número válido!");
+
+            } else {
+                despesa_total += gasto;
+            }
+
+            mes++;
+        }
+        alert("Seu faturamento anual foi de : R$" + valor_total);
+        alert("Seu gasto anual foi de: R$" + despesa_total);
+
+        saldo_total = valor_total - despesa_total;
+
+        alert("Seu saldo ao fim do ano é de: R$" + saldo_total);
+
+        if (saldo_total > 0) {
+            alert("Você saiu no lucro esse ano!")
+
+        } else {
+            alert("Você teve prejuízo esse ano!")
+        }
+    }
+
+    calculo_mensal();
+
+}
+
+ balancoFinanceiro();
 
 
 
