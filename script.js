@@ -140,8 +140,32 @@ function OrdenacaoNumerica() {
 
 }
 
-OrdenacaoNumerica();
+//OrdenacaoNumerica();
 
+//exercício 5: Transformação de Número Par e Ímpar
 
+function verificarNumero() {
+
+    let numero = parseFloat(prompt("Digite um número inteiro:"));
+
+  if (isNaN(numero)) {
+        console.log("Digite um número válido!");
+    } 
+    
+    else if (numero % 2 === 0) {
+        // número é par → transformar em ímpar
+        numero = numero + 1;
+        console.log("O número era par. Novo número (ímpar): " + numero);
+    } 
+    
+    else {
+        // número é ímpar → transformar em par
+        numero = numero + 1;
+        console.log("O número era ímpar. Novo número (par): " + numero);
+    }
+
+}
+
+verificarNumero();
 
 
