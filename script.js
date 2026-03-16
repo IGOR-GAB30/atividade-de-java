@@ -166,6 +166,27 @@ function verificarNumero() {
 
 }
 
-verificarNumero();
+//verificarNumero();
+
+//exercício 6: Verificador de Vogal ou Consoante
+
+function VogalouConsoante() {
+
+ let letra = prompt("Digite uma letra: ");
+
+    if(letra === "a" || letra === "A" || letra === "e" || letra === "E" || letra === "i" || letra === "I" || letra ==="o" || letra === "O" || letra ==="u" || letra === "U" ){
+ 
+        console.log("A letra '" + letra + "' é vogal");
+
+    } else{
+
+        console.log("A letra '" + letra + "' é consoante");
+    }
+
+}
+
+VogalouConsoante();
+
+//exercício 7: 
 
 
