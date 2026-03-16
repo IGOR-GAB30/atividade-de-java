@@ -148,16 +148,16 @@ function verificarNumero() {
 
     let numero = parseFloat(prompt("Digite um número inteiro:"));
 
-  if (isNaN(numero)) {
+    if (isNaN(numero)) {
         console.log("Digite um número válido!");
-    } 
-    
+    }
+
     else if (numero % 2 === 0) {
         // número é par → transformar em ímpar
         numero = numero + 1;
         console.log("O número era par. Novo número (ímpar): " + numero);
-    } 
-    
+    }
+
     else {
         // número é ímpar → transformar em par
         numero = numero + 1;
@@ -172,21 +172,51 @@ function verificarNumero() {
 
 function VogalouConsoante() {
 
- let letra = prompt("Digite uma letra: ");
+    let letra = prompt("Digite uma letra: ");
 
-    if(letra === "a" || letra === "A" || letra === "e" || letra === "E" || letra === "i" || letra === "I" || letra ==="o" || letra === "O" || letra ==="u" || letra === "U" ){
- 
+    if (letra === "a" || letra === "A" || letra === "e" || letra === "E" || letra === "i" || letra === "I" || letra === "o" || letra === "O" || letra === "u" || letra === "U") {
+
         console.log("A letra '" + letra + "' é vogal");
 
-    } else{
+    } else {
 
         console.log("A letra '" + letra + "' é consoante");
     }
 
 }
 
-VogalouConsoante();
+//VogalouConsoante();
 
-//exercício 7: 
+//exercício 7:  Sistema de Preços de uma Picoléteria
 
+function PrecosPicolateria() {
+
+    const sabores = {
+
+        a: { nome: "Chocolate", preco: 1.50 },
+        b: { nome: "Morango", preco: 2.50 },
+        c: { nome: "Creme", preco: 2.50 },
+        d: { nome: "Manga", preco: 3.20 },
+        e: { nome: "Melancia", preco: 3.40 },
+        f: { nome: "Vanilla Ice", preco: 3.00 },
+        g: { nome: "Céu Azul", preco: 3.60 },
+        h: { nome: "Brownie", preco: 4.00 },
+        i: { nome: "Hawaiano", preco: 5.00 }
+
+    };
+
+    while (continua = true) {
+        let codigo_sabor = prompt("Olá, qual é o código do sabor de picolé que você deseja tomar hoje? (opções de a à i)").toLowerCase();
+
+        if (sabores[codigo_sabor]) {
+            alert("Sabor: " + sabores[codigo_sabor].nome + "\nPreço: R$ " + sabores[codigo_sabor].preco);
+        } else {
+            alert("Digite um código válido!");
+        }
+
+        continua = confirm("Deseja tomar mais um picolé?");
+
+    }
+}
+PrecosPicolateria();
 
