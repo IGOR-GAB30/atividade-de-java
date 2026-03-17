@@ -246,4 +246,28 @@ function calcularVariáveis() {
     console.log("Multiplicação das variáveis: " + multiplicacao);
 }
 
-calcularVariáveis();
+//calcularVariáveis();
+
+//exercício 9: Ordenação entre Dois Números
+
+function ordenarDoisNumeros(){
+
+    let variavel1 = 18;
+    let variavel2 = 6;
+
+    if(variavel1 < variavel2){
+    
+        console.log(variavel2 + "," + variavel1);
+    
+    }else{
+
+        console.log(variavel1 + "," + variavel2);
+
+    }
+
+}
+
+ordenarDoisNumeros();
+
+
+
