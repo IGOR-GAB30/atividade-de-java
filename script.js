@@ -218,5 +218,32 @@ function PrecosPicolateria() {
 
     }
 }
-PrecosPicolateria();
+//PrecosPicolateria();
 
+//exercício 8: Operações com Duas Variáveis
+
+function calcularVariáveis() {
+
+    let num1 = 10;
+    let num2 = 8;
+
+    console.log("Valores:");
+    console.log("Num1 = " + num1 + " | Num2 = " + num2);
+
+
+    // a) Diferença entre as duas variáveis
+    let diferenca = num1 - num2;
+
+    // b) Dobro da primeira + triplo da segunda
+    let soma = (2 * num1) + (3 * num2);
+
+    // c) Multiplicação das duas variáveis
+    let multiplicacao = num1 * num2;
+
+
+    console.log("Diferença entre as variáveis: " + diferenca);
+    console.log("Dobro da primeira + triplo da segunda: " + soma);
+    console.log("Multiplicação das variáveis: " + multiplicacao);
+}
+
+calcularVariáveis();
