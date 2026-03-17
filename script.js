@@ -324,5 +324,5 @@ function PagamentoVariavel() {
     console.log("Salário líquido:" + liquido);
 
 }
-
-PagamentoVariavel();
+    
+//PagamentoVariavel();
