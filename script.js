@@ -267,7 +267,22 @@ function ordenarDoisNumeros(){
 
 }
 
-ordenarDoisNumeros();
+//ordenarDoisNumeros();
 
+//exercício 10: Folha de Pagamento Simplificada
 
+function Pagamento(){
 
+    let nome = prompt("Digite o seu nome:");
+    let bruto = parseFloat(prompt("Digite o seu salário bruto:"));
+
+    let INSS = bruto * 0.08;
+    let liquido = bruto - INSS;
+
+    alert("Nome do funcionário: " +nome);
+    alert("Salário bruto: " +bruto);
+    alert("O valor do desconto do INSS (8%) é: " +INSS);
+    alert("Salário líquido: " +liquido);
+}
+
+Pagamento();
