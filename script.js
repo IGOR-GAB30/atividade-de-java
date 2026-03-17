@@ -250,16 +250,16 @@ function calcularVariáveis() {
 
 //exercício 9: Ordenação entre Dois Números
 
-function ordenarDoisNumeros(){
+function ordenarDoisNumeros() {
 
     let variavel1 = 18;
     let variavel2 = 6;
 
-    if(variavel1 < variavel2){
-    
+    if (variavel1 < variavel2) {
+
         console.log(variavel2 + "," + variavel1);
-    
-    }else{
+
+    } else {
 
         console.log(variavel1 + "," + variavel2);
 
@@ -271,7 +271,7 @@ function ordenarDoisNumeros(){
 
 //exercício 10: Folha de Pagamento Simplificada
 
-function Pagamento(){
+function Pagamento() {
 
     let nome = prompt("Digite o seu nome:");
     let bruto = parseFloat(prompt("Digite o seu salário bruto:"));
@@ -279,10 +279,50 @@ function Pagamento(){
     let INSS = bruto * 0.08;
     let liquido = bruto - INSS;
 
-    alert("Nome do funcionário: " +nome);
-    alert("Salário bruto: " +bruto);
-    alert("O valor do desconto do INSS (8%) é: " +INSS);
-    alert("Salário líquido: " +liquido);
+    alert("Nome do funcionário: " + nome);
+    alert("Salário bruto: " + bruto);
+    alert("O valor do desconto do INSS (8%) é: " + INSS);
+    alert("Salário liquido: " + liquido);
 }
 
-Pagamento();
+//Pagamento();
+
+//exercício 11: Folha de Pagamento com Desconto Variável
+
+function PagamentoVariavel() {
+
+    let nome = prompt("Digite o seu nome:");
+    let salarioBruto = parseFloat(prompt("Digite o seu salário bruto:"));
+    let desconto = 0;
+    let liquido = 0;
+    let INSS = 0;
+
+    if (salarioBruto <= 1000) {
+    
+        taxa = 8;
+        desconto = salarioBruto * 0.08;
+        liquido = salarioBruto - desconto;
+
+    } else if (salarioBruto > 1000 && salarioBruto <= 1500) {
+
+        taxa = 8.5;
+        desconto = salarioBruto * 0.085;
+        liquido = salarioBruto - desconto;
+
+    } else if (salarioBruto > 1500) {
+
+        taxa = 9;
+        desconto = salarioBruto * 0.09;
+        liquido = salarioBruto - desconto;
+
+    }
+
+    console.log("Nome: " + nome);
+    console.log("Salário bruto:" + salarioBruto);
+    console.log("Taxa de desconto do INSS:" + taxa + "%");
+    console.log("O valor à ser descontado:" + desconto);
+    console.log("Salário líquido:" + liquido);
+
+}
+
+PagamentoVariavel();
